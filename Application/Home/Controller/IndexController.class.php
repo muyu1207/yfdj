@@ -4,7 +4,8 @@ use Think\Controller;
 class IndexController extends Controller {
 //    首页
     public function index(){
-        
+        $zhuanti_inf = D("Zhuanti")->get_info();
+        $this->assign('zhuanti_inf', $zhuanti_inf);
         $this->display();
     }
 //    专题列表

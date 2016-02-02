@@ -5,7 +5,8 @@ use Think\Model;
 class ZhuantiModel extends Model {
 //    获取全部信息
     public function get_info(){
-        
+        $info = $this->select();
+        return $info;
     }
 
 }
