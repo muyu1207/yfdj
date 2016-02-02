@@ -1,0 +1,71 @@
+<?php
+    if(C('LAYOUT_ON')) {
+        echo '{__NOLAYOUT__}';
+    }
+?>
+  <title>404页面</title>
+ <include file="Public:header" /> 
+    <style type="text/css">
+.nav_out{
+    width: 100% !important;
+    padding-top: 10px;
+    background-color:#fafafa;
+    border-bottom: 1px solid #D8D8D8;
+    height: 100px;   
+}
+  .icon-info{
+      width: 40px;
+      height: 40px;
+      margin-right: 50px;
+    
+    }
+
+.system-message{ padding:160px 48px 100px 48px;width:800px; margin:0px auto; text-align:center}
+.system-message h1{ font-size: 100px; font-weight: normal; line-height: 120px; margin-bottom: 12px; }
+.system-message .jump{ padding-top: 10px}
+.system-message .jump a{ color: #333;}
+.system-message .success,.system-message .error{ display:inline-block; line-height: 50px; font-size: 28px;color:#555555 }
+.system-message .error{ background: url(http://www.easycf.com/Public/home/images/warning.png) no-repeat 0 10px; text-indent:46px}
+.system-message .success{ background: url(http://www.easycf.com/Public/home/images/check.png) no-repeat 0 10px; text-indent:46px}
+.system-message .jump{ text-align:center}
+.system-message .detail{ font-size: 12px; line-height: 20px; margin-top: 12px; display:none}
+#href{
+    color:#06f;
+}
+</style>
+    <div class="system-message">
+        <?php if(isset($message)) {?>
+        <div style="margin:0px auto;">
+            
+            <span class="success"><?php echo($message); ?></span>
+        </div>
+        <?php }else{?>
+        <div style="margin:0px auto;">
+        	<span class="error"><?php echo($error); ?></span>
+        </div>
+        <?php }?>
+        <div style="margin:20px auto;">
+            <p class="detail"></p>
+            <p class="jump">
+            页面自动 <a id="href" href="__APP__/">跳转</a> 等待时间： <b id="wait"><?php echo($waitSecond); ?></b>
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript">
+    (function(){
+    var wait = document.getElementById('wait'),href = document.getElementById('href').href;
+    var interval = setInterval(function(){
+        var time = --wait.innerHTML;
+        if(time <= 0) {
+            location.href = href;
+            clearInterval(interval);
+        };
+    }, 1000);
+    })();
+    </script>
+
+
+
+
+
+ <include file="Public/footer" /> 

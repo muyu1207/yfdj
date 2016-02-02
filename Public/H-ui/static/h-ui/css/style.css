@@ -1,0 +1,590 @@
+@charset "utf-8";
+/* CSS Document */
+/*1.1 布局*/
+.Hui-wraper {
+  padding: 0 20px;
+}
+/*---------------------------*/
+a{color:#333 ;text-decoration:none !important;} 
+
+button{    outline: 0px none !important;
+}
+input{
+    outline: 0px none !important;
+}
+a:hover{color:#FF6633;text-decoration:underline;} 
+a:focus,a:active {
+  outline:none !important;
+  border:none !important;
+}
+.gray {
+    color: #999;
+}
+a:active{
+    text-decoration: none !important;
+}
+a:visited{
+    text-decoration: none !important;
+}
+/*---------------------------*/
+.themcolor{
+    color:#FF6633;
+}
+.middle{
+    width: 1024px;
+    display: block;
+    margin:0px auto;
+}
+body{
+    background-color: #F1F2F3 !important;
+}
+.header{
+    width:100%;
+    height:65px;
+    background-color:#fff;
+    min-width:1200px;
+    position: fixed;
+    bottom: auto;
+    z-index: 998;
+    width: 100%;
+    height: 65px;
+    left: 0px;
+    right: auto;
+    top: 0px;
+}
+.header_m{
+    height: 64px;
+    background-color: #FFF;
+    z-index: 998;
+    font-size: 14px;
+}
+.lh-64{
+    line-height:64px;
+}
+.nav{
+    margin-left:15px;
+}
+.nav a{
+    display: inline-block;
+    float: left;
+    margin-left: 40px;
+    text-align: center;
+    color: #044;
+    font-size: 16px;
+    text-decoration: none;
+}
+/*准备去的*/
+
+.header_b{
+    height: 1px;
+    background-color: #000;
+    opacity: 0.12;
+    z-index: 990;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
+}
+.login{
+    display:block;
+    width:100px;
+    height:36px;
+    color:#fff;
+    /*line-height:64px;*/
+    background-color:#FF6633;
+    /*border: 1px solid #D9D9D9;*/
+    margin-top: 14px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 1px;
+    line-height: 36px;
+}
+.login:hover{
+    color:#fff;
+}
+
+#myModal .modal-body li {
+    text-align: center;
+    margin: 0px 44px;
+   
+    display: inline-block;
+}
+#myModal .modal-body li i:hover {
+    transition: all 0.3s ease 0s;
+    transform: translate(0px, -5px);
+}
+#myModal .modal-body li i {
+    height: 106px;
+    width: 106px;
+    display: block;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.login-modals .modal-close, .login-icon-weibo,.login-icon-qq, .login-modals .login-icon-wechat, .btn-91 i, .btn-360 i, .btn-wandoujia i, .btn-pc i, .icon-weibo, .icon-tietie, .search-blank i, .back-top, .back-top:hover {
+    background-image: url("http://static.liwushuo.com/static/web/css/web/style/css/index_z_d8fb8f2.png");
+}
+ .login-icon-weibo {
+    background-position: 0px -21px;
+}
+ .login-icon-weibo,.login-icon-qq {
+    background-repeat: no-repeat;
+}
+.login-icon-qq {
+    background-position: 0px -130px;
+}
+
+.slider-banner {
+    /*position: absolute;*/
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 450px;
+    background: #333 none no-repeat scroll center center / auto 100%;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out 0s;
+    z-index: 8;
+}
+.blank20 {
+    height: 20px;
+    line-height: 20px;
+    clear: both;
+    visibility: hidden;
+}
+.album-item{
+    width: 186px;
+    margin-left: 23px;
+    /*transition: all 0.5s ease 0s;*/
+    margin-bottom:30px;
+}
+.album-item:hover{
+    transition: all 0.5s ease 0s;
+    transform: translate(0px, -5px);
+    /*box-shadow: 0px 5px 10px rgba(67, 72, 84, 0.3);*/
+}
+
+/*礼物说的代码*/
+.reco-list {
+    width: 1024px;
+}
+.post-item {
+    width: 310px;
+    height: 346px;
+    border-radius: 6px;
+    border: thin solid #DEDEDE;
+    float: left;
+    background: #FFF none repeat scroll 0% 0%;
+    
+    margin-bottom:44px;
+    margin-left:44px;
+}
+.post-item:hover {
+    transition: all 0.5s ease 0s;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+    transform: translate3d(0px, -2px, 0px);
+}
+.post-item .pitem {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.post-item .pitem-cover {
+    height: 142px;
+    width:310px;
+    overflow:hidden;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 6px 6px 0px 0px;
+}
+.post-item .pitem-cover:hover{
+    
+}
+.post-item .new-flag {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 57px;
+    height: 56px;
+    background: transparent url("http://static.liwushuo.com/static/web/img/icon_tag_new_f721355.png") repeat scroll 0% 0% / 100% 100%;
+}
+.post-item .pitem-title {
+    font-size: 18px;
+    padding: 15px;
+    color: #333;
+    line-height: 25px;
+}
+.post-item .pitem-content {
+    font-size: 14px;
+    color: #888;
+    height: 80px;
+    padding: 0px 15px 15px;
+    line-height: 21px;
+}
+.post-item .pitem-event-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+}
+.post-item .pitem-info {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding: 15px;
+}
+.post-item .info-item {
+    float: left;
+    height: 17px;
+    margin-right: 15px;
+}
+.post-item .info-item i {
+    display: block;
+    width: 18px;
+    height: 17px;
+    float: left;
+}
+.post-item .icon-like {
+    background: transparent url("http://static.liwushuo.com/static/web/img/icon_favorites_84ea68a.png") repeat scroll 0% 0%;
+}
+.post-item .info-item span {
+    font-size: 14px;
+    line-height: 14px;
+    color: #333;
+    display: block;
+    padding: 0px;
+    margin: -1px 0px 0px 24px;
+    
+
+}
+.pitem:hover{
+    color:#333;
+}
+
+/*----------底部-----------*/
+.footer{
+    height:100px;
+    background-color: #F1F2F3;
+    /*text-align: center;*/
+}
+.foot_Mid {
+
+    padding: 8px 0px;
+    text-align: center;
+    min-width: 1200px;
+}
+.foot_Mid {
+    text-align: center;
+}
+.foot_Mid .foot_MC .first {
+    border: 0px none;
+}
+.foot_Mid .foot_MC li {
+    padding: 0px 12px;
+    display: inline-block;
+    border-left: 1px solid #919191;
+    line-height: 14px;
+}
+.first {
+    margin-left: 0px !important;
+}
+
+.pg-tmentry a {
+    padding: 0px 12px;
+    background-image: url("http://img4q.duitang.com/uploads/people/201507/29/20150729111454_2mytP.png");
+    background-position: right 2px;
+    background-repeat: no-repeat;
+    color: #666;
+}
+
+/*专题推荐*/
+.get-more-line {
+    border-radius: 2px;
+}
+.get-more-line, .recommend-line {
+    /*position: relative;*/
+    padding: 20px 0px;
+    /*margin-bottom: 30px;*/
+    text-align: center;
+}
+.get-more-line > a {
+    padding: 10px;
+    width: 14%;
+    background-color: #E2E2E2;
+    transition: all 0.5s ease 0s;
+}
+.get-more-line > a:hover{
+    background-color: #fff;
+    
+}
+.get-more-line > a, .recommend-line > a {
+    display: inline-block;
+    font-size: 16px;
+    color: #999;
+}
+/*专题详情*/
+.detail-product-item {
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+    float: left;   
+    width: 316px;
+    margin:0px 10px;
+    margin-bottom:30px;
+}
+.detail-product-item .title {
+    position: relative;
+    padding: 0px 0px 2px 50px;
+    font-size: 16px;
+    height: 26px;
+    line-height: 26px;
+    color: #444;
+    overflow: hidden;
+}
+.detail-product-item .title .icons {
+    position: absolute;
+    height: 26px;
+    width: 17px;
+    left: 17px;
+    top: 0px;
+    background-position: -56px -38px;
+    font-size: 12px;
+    color: #FFF;
+    text-align: center;
+    line-height: 22px;
+    text-indent: 0px;
+    margin-top: 2px;
+}
+.icons {
+    font-size: 0px;
+    line-height: 0;
+    background: transparent url("http://static.ibantang.com/dist/img/sprites@x2-507ddc5a88.png") no-repeat scroll 0% 0% / 160px 75px;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+.btn, .icons {
+    display: inline-block;
+}
+.detail-product-item .pic {
+    position: relative;
+    padding-left: 18px;
+    margin-top: 13px;
+}
+
+.detail-product-item .pic p {
+    padding-top: 4px;
+}
+.detail-product-item .pic-inner {
+    height: 244px;
+    background: #F4F4F4 none no-repeat scroll center center / cover;
+}
+.detail-product-item .desc {
+    padding: 10px 0px 0px 18px;
+    height: 48px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #666;
+    overflow: hidden;
+}
+.detail-product-item .stats {
+    margin-left: 18px;
+    /*padding: 15px 0px 20px;*/
+    height: 16px;
+}
+.detail-product-item .stats .icons {
+    float: left;
+    margin: 2px 6px 0px 0px;
+    height: 14px;
+    width: 16px;
+     background-position: -10px -24px;
+}
+.detail-product-item .stats .r {
+    float: right;
+    color: #FD6363;
+}
+.detail-product-item .dashed {
+    margin-left: 18px;
+}
+.h-dashed-2 {
+    display: block;
+    height: 1px;
+    background: transparent url("http://static.ibantang.com/dist/img/h-dashed-2-9cc48f2645.png") repeat-x scroll 0% 0%;
+}
+
+/*商品筛选*/
+.ui_deals_filter {
+    clear: both;
+    width: 1024px;
+    font-size: 13px;
+    color: #666;
+    background: #FFF none repeat scroll 0% 0%;
+    overflow: hidden;
+    border: 1px solid #E5E5E5;
+}
+
+.ui_deals_filter_item .filter_item {
+    padding: 0px 20px;
+    overflow: hidden;
+}
+.ui_deals_filter_item label {
+    /*width: 80px;*/
+    /*height: 22px;*/
+    /*line-height: 22px;*/
+    color: #333;
+    padding: 10px 0px;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    /*margin-bottom: 5px;*/
+   
+}
+.ui_deals_filter_item .filter_text ul {
+    clear: both;
+}
+.ui_deals_filter_item .filter_text li {
+    padding: 10px 0px;
+    float: left;
+    overflow: hidden;
+}
+.f_l{
+    float:left;
+}
+.ui_deals_filter_item.last_item {
+    border-bottom: 0px none;
+}
+.ui_deals_filter_item {
+    width: 1024px;
+    overflow: hidden;
+    color: #666;
+    border-bottom: 1px dashed #E5E5E5;
+}
+.ui_deals_filter_item .filter_text li a {
+    padding: 0px 12px;
+background-image: url("http://img4q.duitang.com/uploads/people/201507/29/20150729111454_2mytP.png");
+background-position: right 2px;
+background-repeat: no-repeat;
+color: #666;
+}
+
+/*商品详情页样式*/
+ .side-part {
+    position: relative;
+    float: left;
+    width: 300px;
+    padding-left: 49px;
+}
+.side-part .v-dashed {
+    position: absolute;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+}
+.v-dashed {
+    display: block;
+    width: 1px;
+    background: transparent url("http://static.ibantang.com/dist/img/v-dashed-a8f0f91743.png") repeat-y scroll 0% 0%;
+}
+.detail-wrapper .hot-box {
+    margin-bottom: 30px;
+}
+.like-area .like-count {
+    height: 20px;
+    line-height: 20px;
+}
+.like-area .like-count span {
+    color: #FF6633;
+}
+.like-area .likes-list {
+    height: 44px;
+    padding: 20px 0px;
+}
+.like-area .likes-list li {
+    float: left;
+    height: 44px;
+    width: 44px;
+    padding-right: 15px;
+}
+.like-area .likes-list li .avatar {
+    height: 44px;
+    width: 44px;
+    border-radius: 22px;
+    background-color: #F4F4F4;
+    background-size: cover;
+    overflow: hidden;
+}
+.like-area .likes-list li.last {
+    padding-right: 0px;
+}
+.hot-box:last-child {
+    margin-bottom: 0px;
+}
+.hot-box .title {
+    font-size: 16px;
+}
+.hot-box .cates {
+    position: relative;
+    padding: 20px 0px 0px;
+    overflow: hidden;
+}
+.hot-box .cates a.cate {
+    display: block;
+    float: left;
+    width: 60px;
+    height: 24px;
+    font-size: 13px;
+    line-height: 24px;
+    border: 1px solid #EFEFEF;
+    border-radius: 12px;
+    text-align: center;
+    margin: 0px 10px 15px 0px;
+    color: #666;
+}
+ .hot-box .cates a.cate.last {
+    margin-right: 0px;
+}
+.current-topic-p {
+    padding: 15px 0px;
+    margin-right: -10px;
+    position: relative;
+    overflow: hidden;
+}
+.current-topic-p .p-item {
+    float: left;
+    height: 90px;
+    width: 90px;
+    margin: 0px 5px 5px 0px;
+    background: #F7F7F7 none repeat scroll center center / cover;
+}
+.current-topic-p .p-item:hover {
+    opacity: 0.8;
+}
+.desc {
+    padding: 15px 0px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #666;
+}
+.price {
+    color: #FF6633;
+    /*padding: 0px 0px 20px;*/
+    height: 34px;
+    font-size: 20px;
+}
+.price span {
+    display: block;
+    float: left;
+    padding-top: 14px;
+    line-height: 5px;
+    color: #FF6633;
+}
+.price a.buy {
+    float: right;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    width: 90px;
+    background-color: #FF6633;
+    border-radius: 0px;
+    color:#fff;
+    text-align:center;
+    font-size:14px;
+}

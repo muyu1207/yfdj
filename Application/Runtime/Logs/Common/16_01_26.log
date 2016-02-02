@@ -1,0 +1,6 @@
+[ 2016-01-26T09:38:55+08:00 ] ::1 /yfdj/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001670s ]
+ERR: 无法加载模块:Admin
+
