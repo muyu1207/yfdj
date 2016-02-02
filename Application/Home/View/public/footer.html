@@ -1,0 +1,67 @@
+        
+        <div class="footer">
+            <div class="blank20"></div>           
+              <div class="foot_Mid clearfix">
+                    <div class="foot_MC">
+                        <ul class="clearfix">
+                            <li class="first">
+                                <a href="#" target="_blank">关于我们</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">小吃推荐</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">吃货分享</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">我要推荐</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">地方特产</a>
+                            </li>               
+                            <li>
+                                <a href="#" target="_blank">商家合作</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">用户反馈</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            <div class="copy mt-10 text-c">
+                Copyright @ 2016 <a href="__APP__">远方的家 </a> All Right Reserved
+            </div>
+        </div>
+        <script type="text/javascript" src="__PUBLIC__/H-ui/lib/jquery/1.9.1/jquery.min.js"></script>
+           <script type="text/javascript">
+        $(function(){
+            var len = $(".post-item").length;        
+            var cols = Math.ceil(len/3);
+            if(cols){
+                for(var i=1; i<=cols; i++){
+                    $(".post-item").eq(3*i-3).css("margin-left", "0px");
+                }
+            } 
+        });             
+    </script>
+    <script type="text/javascript">
+        $(function(){
+            var len = $(".album-item").length;        
+            var cols = Math.ceil(len/5);
+            if(cols){
+                for(var i=1; i<=cols; i++){
+                    $(".album-item").eq(5*i-5).css("margin-left", "0px");
+                }
+            } 
+        });             
+    </script>
+        <script type="text/javascript" src="__PUBLIC__/H-ui/static/h-ui/js/h-ui.js"></script> 
+        <script type="text/javascript" src="__PUBLIC__/H-ui/lib/bootstrap-modal/2.2.4/bootstrap-modalmanager.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/H-ui/lib/bootstrap-modal/2.2.4/bootstrap-modal.js"></script>
+        <script language="javascript" type="text/javascript" src="__PUBLIC__/H-ui/lib/jQuery.autocomplete/1.1/jquery.autocomplete.js"></script>
+        <script language="javascript" type="text/javascript" src="__PUBLIC__/H-ui/lib/jQuery.autocomplete/1.1/demo.js"></script>
+        <script type="text/javascript">
+            $(function(){$(window).on("scroll",$backToTopFun);$backToTopFun();});
+        </script>
+    </body>
+</html>

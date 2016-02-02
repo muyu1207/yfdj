@@ -64,12 +64,12 @@ body{
 .nav{
     margin-left:15px;
 }
-.nav a{
+.nav a {
     display: inline-block;
     float: left;
-    margin-left: 40px;
+    padding: 0px 20px;
     text-align: center;
-    color: #044;
+    color: #333;
     font-size: 16px;
     text-decoration: none;
 }
@@ -167,7 +167,7 @@ body{
 .post-item {
     width: 310px;
     height: 346px;
-    border-radius: 6px;
+    border-radius: 0px;
     border: thin solid #DEDEDE;
     float: left;
     background: #FFF none repeat scroll 0% 0%;
@@ -192,11 +192,9 @@ body{
     overflow:hidden;
     background-size: cover;
     background-position: 50% 50%;
-    border-radius: 6px 6px 0px 0px;
+    /*border-radius: 6px 6px 0px 0px;*/
 }
-.post-item .pitem-cover:hover{
-    
-}
+
 .post-item .new-flag {
     position: absolute;
     left: 0px;
@@ -206,12 +204,15 @@ body{
     background: transparent url("http://static.liwushuo.com/static/web/img/icon_tag_new_f721355.png") repeat scroll 0% 0% / 100% 100%;
 }
 .post-item .pitem-title {
+    width:290px;
     font-size: 18px;
     padding: 15px;
     color: #333;
     line-height: 25px;
 }
 .post-item .pitem-content {
+    height:70px;
+    white-space: pre-wrap;
     font-size: 14px;
     color: #888;
     height: 80px;
@@ -257,6 +258,9 @@ body{
 }
 .pitem:hover{
     color:#333;
+}
+#search_text{
+    width:200px;
 }
 
 /*----------底部-----------*/
