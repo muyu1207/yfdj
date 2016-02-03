@@ -87,7 +87,7 @@
         <div class="blank20"></div>
         <div class="zhuanti_list">
             <ul class="reco-list" id="reco-list">
-               <?php if(is_array($zhuanti_inf)): $i = 0; $__LIST__ = $zhuanti_inf;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li class="post-item">
+               <?php if(is_array($zhuanti_inf)): $i = 0; $__LIST__ = array_slice($zhuanti_inf,0,9,true);if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li class="post-item">
                     <a href="/yfdj/Index/post/id/<?php echo ($vo["id"]); ?>" class="pitem" target="_blank">
                         <div class="pitem-cover" style="background: url(<?php echo ($vo["img"]); ?>);background-size:cover;background-position:50% 50%;"></div>
                         <!--下面这个是NEW-->
@@ -106,7 +106,6 @@
                     </a>
                     </li><?php endforeach; endif; else: echo "" ;endif; ?>
                <div class="cl"></div>
-
             </ul>
             <div class="cl"></div>
             <div class="get-more-line">
@@ -115,7 +114,6 @@
         </div>
     </div>
 </div>
-
 <div class="blank20"></div>
 <div class="blank20"></div>
 <div class="content" style="width:100%;background-color:#fff;">
@@ -551,13 +549,54 @@
             } 
         });             
     </script>
-        <script type="text/javascript" src="/yfdj/Public/H-ui/static/h-ui/js/h-ui.js"></script> 
-        <script type="text/javascript" src="/yfdj/Public/H-ui/lib/bootstrap-modal/2.2.4/bootstrap-modalmanager.js"></script>
-        <script type="text/javascript" src="/yfdj/Public/H-ui/lib/bootstrap-modal/2.2.4/bootstrap-modal.js"></script>
-        <script language="javascript" type="text/javascript" src="/yfdj/Public/H-ui/lib/jQuery.autocomplete/1.1/jquery.autocomplete.js"></script>
-        <script language="javascript" type="text/javascript" src="/yfdj/Public/H-ui/lib/jQuery.autocomplete/1.1/demo.js"></script>
-        <script type="text/javascript">
-            $(function(){$(window).on("scroll",$backToTopFun);$backToTopFun();});
+    <script type="text/javascript" src="/yfdj/Public/H-ui/static/h-ui/js/h-ui.js"></script> 
+    <script type="text/javascript" src="/yfdj/Public/H-ui/lib/bootstrap-modal/2.2.4/bootstrap-modalmanager.js"></script>
+    <script type="text/javascript" src="/yfdj/Public/H-ui/lib/bootstrap-modal/2.2.4/bootstrap-modal.js"></script>
+    <script language="javascript" type="text/javascript" src="/yfdj/Public/H-ui/lib/jQuery.autocomplete/1.1/jquery.autocomplete.js"></script>
+    <script language="javascript" type="text/javascript" src="/yfdj/Public/H-ui/lib/jQuery.autocomplete/1.1/demo.js"></script>
+    <script type="text/javascript">
+        $(function(){$(window).on("scroll",$backToTopFun);$backToTopFun();});
+    </script>
+    <!-- 专题页下拉加载js -->
+     <script type="text/javascript">
+            i = 1; //设置当前页数 
+            $(function() {
+                var totalpage = 10; //总页数，防止超过总页数继续滚动
+                var winH = $(window).height(); //页面可视区域高度 
+                $(window).scroll(function() {
+                    if (i < totalpage) { // 当滚动的页数小于总页数的时候，继续加载
+                        var pageH = $(document.body).height();
+                        var scrollT = $(window).scrollTop(); //滚动条top 
+                        var aa = (pageH - winH - scrollT) / winH;
+                        if (aa < 0.01) {
+                           getJson(i)
+                        }
+                    } else { //否则显示无数据
+                        showEmpty();
+                    }
+                });
+                getJson(0); //加载第一页
+            });
+            function getJson(page) {
+                $(".nodata").show().html("<img src='http://www.sucaihuo.com/Public/images/loading.gif'/>");
+                $.getJSON("/yfdj/Ajax/index", {page: i}, function(json) {
+                    if (json) {
+                        var str = "";
+                        $.each(json, function(index, array) {
+                            var str = "<div class='ft-20'>" + array['title'] + "</div>";
+
+                            $("#lists").append(str);
+                        });
+                        $(".nodata").hide()
+                    } else {
+                        showEmpty();
+                    }
+                });
+                i++;
+            }
+            function showEmpty() {
+                $(".nodata").show().html("别滚动了，已经到底了。。。");
+            }
         </script>
     </body>
 </html>

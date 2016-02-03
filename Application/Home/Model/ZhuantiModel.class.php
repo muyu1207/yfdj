@@ -5,7 +5,7 @@ use Think\Model;
 class ZhuantiModel extends Model {
 //    获取全部信息
     public function get_info(){
-        $info = $this->select();
+        $info = $this->order("time desc")->select();
         return $info;
     }
 

@@ -10,6 +10,8 @@ class IndexController extends Controller {
     }
 //    专题列表
     public function zhuanti(){
+        $zhuanti_inf = D("Zhuanti")->get_info();
+        $this->assign('zhuanti_inf', $zhuanti_inf);
         $this->display();
     }
 //    专题详情

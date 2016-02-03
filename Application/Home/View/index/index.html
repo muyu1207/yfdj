@@ -15,7 +15,7 @@
         <div class="blank20"></div>
         <div class="zhuanti_list">
             <ul class="reco-list" id="reco-list">
-               <volist name="zhuanti_inf" id="vo">
+               <volist name="zhuanti_inf" id="vo" offset="0" length="9">
                    <li class="post-item">
                     <a href="__APP__/Index/post/id/{$vo.id}" class="pitem" target="_blank">
                         <div class="pitem-cover" style="background: url({$vo.img});background-size:cover;background-position:50% 50%;"></div>
@@ -36,7 +36,6 @@
                     </li>
                </volist>
                <div class="cl"></div>
-
             </ul>
             <div class="cl"></div>
             <div class="get-more-line">
@@ -45,7 +44,6 @@
         </div>
     </div>
 </div>
-
 <div class="blank20"></div>
 <div class="blank20"></div>
 <div class="content" style="width:100%;background-color:#fff;">
