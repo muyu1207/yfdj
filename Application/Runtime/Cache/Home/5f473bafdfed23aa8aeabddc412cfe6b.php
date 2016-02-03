@@ -160,7 +160,11 @@
     <script type="text/javascript">
         $(function(){$(window).on("scroll",$backToTopFun);$backToTopFun();});
     </script>
-    <!-- 专题页下拉加载js -->
+  
+    
+    </body>
+</html>
+  <!-- 专题页下拉加载js -->
      <script type="text/javascript">
             i = 1; //设置当前页数 
             $(function() {
@@ -208,6 +212,3 @@
             } 
             }
         </script>
-    
-    </body>
-</html>

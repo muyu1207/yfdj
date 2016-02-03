@@ -527,7 +527,7 @@
             </div>
         </div>
         <script type="text/javascript" src="/yfdj/Public/H-ui/lib/jquery/1.9.1/jquery.min.js"></script>
-           <script type="text/javascript">
+    <script type="text/javascript">
         $(function(){
             var len = $(".post-item").length;        
             var cols = Math.ceil(len/3);
@@ -537,7 +537,7 @@
                 }
             } 
         });             
-    </script>
+    </script>     
     <script type="text/javascript">
         $(function(){
             var len = $(".album-item").length;        
@@ -557,46 +557,7 @@
     <script type="text/javascript">
         $(function(){$(window).on("scroll",$backToTopFun);$backToTopFun();});
     </script>
-    <!-- 专题页下拉加载js -->
-     <script type="text/javascript">
-            i = 1; //设置当前页数 
-            $(function() {
-                var totalpage = 10; //总页数，防止超过总页数继续滚动
-                var winH = $(window).height(); //页面可视区域高度 
-                $(window).scroll(function() {
-                    if (i < totalpage) { // 当滚动的页数小于总页数的时候，继续加载
-                        var pageH = $(document.body).height();
-                        var scrollT = $(window).scrollTop(); //滚动条top 
-                        var aa = (pageH - winH - scrollT) / winH;
-                        if (aa < 0.01) {
-                           getJson(i)
-                        }
-                    } else { //否则显示无数据
-                        showEmpty();
-                    }
-                });
-                getJson(0); //加载第一页
-            });
-            function getJson(page) {
-                $(".nodata").show().html("<img src='http://www.sucaihuo.com/Public/images/loading.gif'/>");
-                $.getJSON("/yfdj/Ajax/index", {page: i}, function(json) {
-                    if (json) {
-                        var str = "";
-                        $.each(json, function(index, array) {
-                            var str = "<div class='ft-20'>" + array['title'] + "</div>";
-
-                            $("#lists").append(str);
-                        });
-                        $(".nodata").hide()
-                    } else {
-                        showEmpty();
-                    }
-                });
-                i++;
-            }
-            function showEmpty() {
-                $(".nodata").show().html("别滚动了，已经到底了。。。");
-            }
-        </script>
+  
+    
     </body>
 </html>
