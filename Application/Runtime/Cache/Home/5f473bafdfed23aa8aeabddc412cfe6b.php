@@ -71,30 +71,24 @@
             <div class="header_b">                
             </div>
         </div>   
-
 <style>
     .footer{
         background-color: #fff !important;
     }
 </style>    
+<div class="blank20"></div>
+<div class="contents middle">
+    <div class="zhuanti">
         <div class="blank20"></div>
-        <div class="contents middle">
-            <div class="zhuanti">
-                <div class="blank20"></div>
-                <div class="blank20"></div>
-                <div class="blank20"></div>
-                <div class="blank20"></div>
-                <div class="zhuanti_list">
-                    <ul class="reco-list" id="reco-list">
-                    </ul>
-                    <div class="cl"></div>
-                    
-                </div>
-
-
-
-            </div>
+        <div class="blank20"></div>
+        <div class="blank20"></div>
+        <div class="blank20"></div>
+        <div class="zhuanti_list">
+            <ul class="reco-list" id="reco-list"></ul>
+            <div class="cl"></div>
         </div>
+    </div>
+</div>
         
         <div class="footer">
             <div class="blank20"></div>           
@@ -190,7 +184,7 @@
                     if (json) {
                         var str = "";
                         $.each(json, function(index, array) {
-                         var str = "<li class = 'post-item'><a href='/yfdj/Index/post/id/' " + array['id'] +" class='pitem'><div class='pitem-cover' style='background:url(" + array['img'] + ");background-size:cover;background-position:50% 50%;'></div><div class='pitem-title text-overflow'>" + array['title'] + "</div><div class='pitem-content text-overflow' style='height:70px;white-space: pre-wrap'>" +array['description']+ "</div><ul class='pitem-info'><li class='info-item'><i class='info-icon icon-like'></i><span>收藏（" + array['collect'] + ")</span></li></ul></a></li>";
+                         var str = "<li class = 'post-item'><a href='/yfdj/Index/post/id/ " + array['id'] +"' class='pitem'><div class='pitem-cover' style='background:url(" + array['img'] + ");background-size:cover;background-position:50% 50%;'></div><div class='pitem-title text-overflow'>" + array['title'] + "</div><div class='pitem-content text-overflow' style='height:70px;white-space: pre-wrap'>" +array['description']+ "</div><ul class='pitem-info'><li class='info-item'><i class='info-icon icon-like'></i><span>收藏（" + array['collect'] + ")</span></li></ul></a></li>";
 
                             $("#reco-list").append(str);
                         });

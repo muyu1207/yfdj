@@ -3,11 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/LeoPHP/WWW/yfdj/Application/Home/View/index/index.html</file>
-            <file>file:/E:/LeoPHP/WWW/yfdj/Application/Home/Controller/IndexController.class.php</file>
-            <file>file:/E:/LeoPHP/WWW/yfdj/Application/Home/View/index/zhuanti.html</file>
-            <file>file:/E:/LeoPHP/WWW/yfdj/Public/H-ui/static/h-ui/css/style.css</file>
-            <file>file:/E:/LeoPHP/WWW/yfdj/Application/Home/Controller/AjaxController.class.php</file>
+            <file>file:/Users/zhangxu/www/yfdj/Application/Home/Controller/IndexController.class.php</file>
+            <file>file:/Users/zhangxu/www/yfdj/Application/Home/View/index/post.html</file>
+            <file>file:/Users/zhangxu/www/yfdj/Application/Home/View/index/index.html</file>
+            <file>file:/Users/zhangxu/www/yfdj/Application/Home/View/public/header.html</file>
+            <file>file:/Users/zhangxu/www/yfdj/Application/Home/Model/ZhuantiModel.class.php</file>
+            <file>file:/Users/zhangxu/www/yfdj/Application/Home/View/index/product.html</file>
+            <file>file:/Users/zhangxu/www/yfdj/Application/Home/View/index/zhuanti.html</file>
         </group>
     </open-files>
 </project-private>

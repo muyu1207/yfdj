@@ -8,5 +8,10 @@ class ZhuantiModel extends Model {
         $info = $this->order("time desc")->select();
         return $info;
     }
+//    获取单个信息
+    public function get_detail($id){
+        $info = $this->find($id);
+        return $info;
+    }
 
 }

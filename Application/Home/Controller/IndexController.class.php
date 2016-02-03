@@ -16,6 +16,9 @@ class IndexController extends Controller {
     }
 //    专题详情
     public function post(){
+        $id = I("id");
+        $zhuanti_detail = D("Zhuanti")->get_detail($id);
+        $this->assign('zhuanti_detail', $zhuanti_detail);
         $this->display();
     }
 //    小吃街列表

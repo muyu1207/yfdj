@@ -73,7 +73,6 @@
         </div>  
 <!--banner图-->
 <div class="blank20"></div>
-
 <div style="background-image: url(/yfdj/Public/public/banner.jpg); background-color:#FF6633; opacity: 1;" class="slider-banner">
 </div>
 <div class="blank20"></div>
